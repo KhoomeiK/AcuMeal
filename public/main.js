@@ -7,24 +7,17 @@ $(() =>  {
         storageBucket: "acumeal-c8f89.appspot.com",
         messagingSenderId: "741968191320"
     });
+    console.log("wtf");
 
     var db = firebase.firestore();
     var myDoc = "";
 
-    db.collection('users').get()
-    .then((snapshot) => {
-    	snapshot.forEach((doc) => {
-    		console.log(doc.id);
-    	});
-    });
-
     function signInButton() {
-		const provider = new firebase.auth.GoogleAuthProvider(); // sign in with firebase
-		firebase.auth().signInWithPopup(provider).then((result) => {
+	    const provider = new firebase.auth.GoogleAuthProvider(); // sign in with firebase
+	    firebase.auth().signInWithPopup(provider).then((result) => {
             var user = result.user;
             myDoc = db.collection("users").doc(user.uid);
             alert(user.uid);
-            alert(myDoc);
             myDoc.set({"Name": user.displayName}).then( () => {
                 window.location.replace("survey.html?" + user.uid);
             });
