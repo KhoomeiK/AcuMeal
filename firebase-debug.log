@@ -1,0 +1,38 @@
+[debug] [2018-06-21T06:30:25.693Z] ----------------------------------------------------------------------
+[debug] [2018-06-21T06:30:25.695Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-21T06:30:25.695Z] CLI Version:   3.18.5
+[debug] [2018-06-21T06:30:25.695Z] Platform:      darwin
+[debug] [2018-06-21T06:30:25.695Z] Node Version:  v8.11.1
+[debug] [2018-06-21T06:30:25.695Z] Time:          Wed Jun 20 2018 23:30:25 GMT-0700 (PDT)
+[debug] [2018-06-21T06:30:25.695Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-21T06:30:25.707Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-21T06:30:25.707Z] > authorizing via signed-in user
+[debug] [2018-06-21T06:30:25.709Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/acumeal-c8f89  
+  
+ Wed Jun 20 2018 23:30:25 GMT-0700 (PDT)
+[debug] [2018-06-21T06:30:26.265Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-21T06:30:26.265Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/acumeal-c8f89/tokens  
+  
+ Wed Jun 20 2018 23:30:26 GMT-0700 (PDT)
+[debug] [2018-06-21T06:30:26.835Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-21T06:30:26.836Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/acumeal-c8f89  
+  
+ Wed Jun 20 2018 23:30:26 GMT-0700 (PDT)
+[debug] [2018-06-21T06:30:27.199Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/rohan/Documents/Webwork/AcuMeal'...
+[info] 
+[debug] [2018-06-21T06:30:29.249Z] Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/logs'
+    at Object.fs.mkdirSync (fs.js:885:18)
+    at Object.assertLogsPath (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/emulator/logs.js:65:10)
+    at new Controller (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/cli/controller.js:77:32)
+    at FunctionsEmulator.start (/usr/local/lib/node_modules/firebase-tools/lib/functionsEmulator.js:113:21)
+    at Object.start (/usr/local/lib/node_modules/firebase-tools/lib/serve/functions.js:9:29)
+    at /usr/local/lib/node_modules/firebase-tools/lib/serve/index.js:17:21
+    at arrayMap (/usr/local/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:639:23)
+    at Function.map (/usr/local/lib/node_modules/firebase-tools/node_modules/lodash/lodash.js:9554:14)
+    at _serve (/usr/local/lib/node_modules/firebase-tools/lib/serve/index.js:15:7)
+    at Command._action (/usr/local/lib/node_modules/firebase-tools/commands/serve.js:48:12)
+[error] 
+[error] Error: An unexpected error has occurred.
