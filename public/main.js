@@ -23,10 +23,11 @@ $(() =>  {
 		firebase.auth().signInWithPopup(provider).then((result) => {
             var user = result.user;
             myDoc = db.collection("users").doc(user.uid);
-            console.log(user.uid)
-            myDoc.set({"Name": user.displayName});
-            $("#sign").html("<h2>"+user.displayName+"</h1>"); // puts user's name on sign in button
-            window.location.replace("survey.html?" + user.uid);
+            alert(user.uid);
+            alert(myDoc);
+            myDoc.set({"Name": user.displayName}).then( () => {
+                window.location.replace("survey.html?" + user.uid);
+            });
         });
     }
 
