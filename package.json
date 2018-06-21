@@ -1,0 +1,19 @@
+{
+  "name": "acumeal",
+  "version": "1.0.0",
+  "description": "Meal personalization and nutritionist app",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhoomeiK/AcuMeal.git"
+  },
+  "author": "KhoomeiK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KhoomeiK/AcuMeal/issues"
+  },
+  "homepage": "https://github.com/KhoomeiK/AcuMeal#readme"
+}

@@ -1,0 +1,29 @@
+{
+	Age: age,
+	Weight: weight,
+	Height: height,
+	Gender: gender,
+
+	Activity: activity,
+	Workout: workout,
+	Goal: goal,
+
+	Wake: wake,
+	Sleep: sleep,
+	Hunger: hunger,
+
+	Conditions: [],
+	Dislikes: [],
+
+	CookTime: cook,
+	Meals: meals,
+
+	FruitsDislike: [],
+	ProteinSource: [],
+	CarbSource: [],
+
+	Taste: taste,
+	Cuisine: [],
+	Allergies: [],
+	Healthiness: health,
+}
