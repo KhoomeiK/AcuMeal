@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(() => {
     var app = firebase.initializeApp({
         apiKey: "AIzaSyDV7SDc8Q6tbiAenlBPM5iHZ6ew5rhmA0o",
         authDomain: "acumeal-c8f89.firebaseapp.com",
@@ -17,11 +17,14 @@ $(document).ready(function () {
 
     $("#sub").click(()=> {
         form = $("#q").submit(val => {return false;})[0];
+        console.log(form);
         for(var i = 0; i < 10; i++) {
             console.log(form[i].type);
             if (form[i].type == "text" || $(form[i]).is(":checked"))
                 data.push(form[i].value);
         }
+
+        alert(data);
 
         myDoc.update({
             data: {
@@ -31,7 +34,8 @@ $(document).ready(function () {
                 gender: data[3],
                 activity: data[4]
             }
-        }).then(window.location.replace("http://www.thanks.com")); // create thanks.html page
+        }).then(() => {
+            window.location.replace("http://www.thanks.com") // create thanks.html page
+        });
     });
-
 });
