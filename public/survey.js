@@ -9,23 +9,30 @@ $(document).ready(function () {
     });
 
     var db = firebase.firestore();
-
-    db.collection('users').get()
-    .then((snapshot) => {
-        snapshot.forEach((doc) => {
-            console.log(doc.id);
-        });
-    });
-
     var uid = window.location.href.split("?", 2)[1];
-    console.log(uid);
+    var myDoc = db.collection("users").doc(uid);
 
     var form = "";
+    var data = [];
 
     $("#sub").click(()=> {
         form = $("#q").submit(val => {return false;})[0];
-        for(var i = 0; i < 5; i++)
-            console.log(form[i].value);
+        console.log(form[1].value);
+        for(var i = 0; i < 10; i++) {
+            console.log(form[i].type);
+            if (form[i].type == "text" || $(form[i]).is(":checked"))
+                data.push(form[i].value);
+        }
+
+        myDoc.update({
+            data: {
+                age: data[0],
+                height: data[1],
+                weight: data[2],
+                gender: data[3],
+                activity: data[4]
+            }
+        });
     });
-    
+
 });
