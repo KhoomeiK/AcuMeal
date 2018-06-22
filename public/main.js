@@ -27,6 +27,3 @@ $(() =>  {
 		signInButton();
 	});
 });
-
-
-//sahil was here
