@@ -50,7 +50,7 @@ $(() => {
                 healthy: data[20]
             }
         }).then(() => {
-            window.location.replace("http://www.thanks.com") // create thanks.html page
+            // window.location.replace("http://www.thanks.com") // create thanks.html page
         });
     });
 });
