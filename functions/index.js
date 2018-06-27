@@ -10,8 +10,8 @@ exports.analyze = functions.firestore.document("users/{uid}")
   // write your algorithm here using doc
 
   var training_data = [
-    {"color": "blue", "shape": "square", "liked": false },
-    {"color": "red", "shape": "square", "liked": false}, 
+    {"color": "blue", "shape": "square", "liked":false },
+    {"color": "red", "shape": "square", "liked":false}, 
     {"color":"blue", "shape":"circle", "liked":true},
     {"color":"red", "shape":"circle", "liked":true},
     {"color":"blue", "shape":"hexagon", "liked":false},
@@ -19,6 +19,7 @@ exports.analyze = functions.firestore.document("users/{uid}")
     {"color":"yellow", "shape":"hexagon", "liked":true},
     {"color":"yellow", "shape":"circle", "liked":true}
   ];
+
   var test_data = [
     {"color":"blue", "shape":"hexagon", "liked":false},
     {"color":"red", "shape":"hexagon", "liked":false},
@@ -30,6 +31,11 @@ exports.analyze = functions.firestore.document("users/{uid}")
   var features = ["color", "shape"];
 
   var dt = new DecisionTree(training_data, class_name, features);
+
+exports.helloWorld = functions.https.onRequest((request, response) => {
+ response.send("Hello from Firebase!");
+
+ 
 
   var predicted_class = dt.predict({
     color: "blue",
@@ -43,4 +49,4 @@ exports.analyze = functions.firestore.document("users/{uid}")
   return change.after.ref.update({
     // set some mealPlan variable to whatever meal plan the algorithm created
   }, {merge: true});
-});
+})});
