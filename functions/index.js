@@ -4,7 +4,6 @@ const DecisionTree = require('decision-tree');
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 
-
 exports.analyze = functions.firestore.document("users/{uid}")
 .onWrite((change, context) => {
   const doc = change.data(); // gets user document that was written
@@ -44,5 +43,4 @@ exports.analyze = functions.firestore.document("users/{uid}")
   return change.after.ref.update({
     // set some mealPlan variable to whatever meal plan the algorithm created
   }, {merge: true});
-
 });
