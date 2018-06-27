@@ -13,44 +13,52 @@ $(() => {
     var myDoc = db.collection("users").doc(uid);
 
     var form = "";
-    var data = [];
+    var data = []; 
 
     $("#sub").click(()=> {
         form = $("#q").submit(val => {return false;})[0];
-        console.log(form);
-        for(var i = 0; i < 20; i++) {
-            console.log(form[i].type);
+        for(var i = 0; i < 94; i++) {
             if (form[i].type == "text" || $(form[i]).is(":checked"))
                 data.push(form[i].value);
         }
+        console.log(data.length);
+        console.log(data);
 
-        alert(data);
-
-        myDoc.update({
-            data: {
-                age: data[0],
-                height: data[1],
-                weight: data[2],
-                gender: data[3],
-                meal: data[4],
-                condition: data[5],
-                activity: data[6],
-                workout: data[7],
-                goals: data[8],
-                cookTime: data[9],
-                want: data[10],
-                recipeWant: data[11],
-                meals: data[12],
-                fruits: data[13], // this needs to be fixed for multiple choices
-                protein: data[14],
-                carbs: data[15],
-                taste: data[16],
-                cuisine: data[17], // this needs to be fixed for multiple choices
-                allergies: data[18], // this needs to be fixed for multiple choices
-                healthy: data[20]
-            }
-        }).then(() => {
-            // window.location.replace("http://www.thanks.com") // create thanks.html page
-        });
+        if (data.length < 20) {
+            alert("You haven't filled out all the questions");
+            data = [];
+        }
+        else
+            myDoc.update({
+                data: {
+                    age: data[0],
+                    height: data[1],
+                    weight: data[2],
+                    gender: data[3],
+                    meal: data[4],
+                    condition: data[5],
+                    activity: data[6],
+                    workout: data[7],
+                    goals: data[8],
+                    cookTime: data[9],
+                    want: data[10],
+                    recipeWant: data[11],
+                    meals: data[12],
+                    fruits: data[13], // this needs to be fixed for multiple choices
+                    protein: data[14],
+                    carbs: data[15],
+                    taste: data[16],
+                    cuisine: data[17], // this needs to be fixed for multiple choices
+                    allergies: data[18], // this needs to be fixed for multiple choices
+                    healthy: data[20]
+                }
+            }).catch(error => {
+                data = [];
+            })
+            .then(() => {
+                data = [];
+                console.log(data);
+                // window.location.replace("http://www.thanks.com") // create thanks.html page
+            });
     });
 });
