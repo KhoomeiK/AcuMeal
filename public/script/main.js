@@ -7,7 +7,7 @@ $(() =>  {
         storageBucket: "acumeal-c8f89.appspot.com",
         messagingSenderId: "741968191320"
     });
-
+    
     var db = firebase.firestore();
     var myDoc = "";
 
@@ -17,7 +17,7 @@ $(() =>  {
             var user = result.user;
             myDoc = db.collection("users").doc(user.uid);
             myDoc.set({"Name": user.displayName}).then( () => {
-                window.location.replace("../survey.html?" + user.uid);
+                window.location.replace("/public/survey.html?" + user.uid);
             });
         });
     }

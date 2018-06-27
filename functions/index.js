@@ -35,8 +35,6 @@ exports.analyze = functions.firestore.document("users/{uid}")
 exports.helloWorld = functions.https.onRequest((request, response) => {
  response.send("Hello from Firebase!");
 
- 
-
   var predicted_class = dt.predict({
     color: "blue",
     shape: "hexagon"
@@ -46,7 +44,9 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 
   var treeModel = dt.toJSON();
 
+  var mealPlan = "";
+
   return change.after.ref.update({
-    // set some mealPlan variable to whatever meal plan the algorithm created
+    mealPlan: mealPlan // set some mealPlan variable to whatever meal plan the algorithm created
   }, {merge: true});
 })});
