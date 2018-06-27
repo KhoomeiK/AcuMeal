@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+    </head>
+    <body>
+        <form id="q">
+        <div>
+            <h3>Metrics?</h3>
+            <input type="text" placeholder="Age"><BR>
+            <input type="text" placeholder="Height"><BR>
+            <input type="text" placeholder="Weight"><BR> <BR>
+        </div>
+        
+        <div>
+            <h3>Gender?</h3>
+            <input type="radio" value="m" name="gender"> Male
+            <input type="radio" value="f" name="gender"> Female
+            <input type="radio" value="o" name="gender"> Other<BR><BR>
+        </div>
+
+        <div>
+            <h3>How would you describe your level of physical activity?</h3>
+            <input type="radio" value="0" name="activity"> Not Active, I do not workout <BR>
+            <input type="radio" value="1" name="activity"> Somewhat Active, I workout 1-2 times per week<BR>
+            <input type="radio" value="2" name="activity"> Moderately Active, I workout 3-5 times per week<BR>
+            <input type="radio" value="3" name="activity"> Very Active, I workout 6-7 times per week<BR>
+            <input type="radio" value="4" name="activity"> Extremely Active, I workout 8 or more times per week<BR>
+        </div> 
+
+        <BR>
+        <input type="submit" id="sub" value="Submit">
+    </form>
+
+        <!--                        FOOTER                          -->
+        <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="./survey.js"></script>
+        <!--                        FOOTER                          -->
+    </body>
+</html>

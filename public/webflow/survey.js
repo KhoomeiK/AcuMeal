@@ -11,6 +11,9 @@ $(() => {
     var db = firebase.firestore();
     var uid = window.location.href.split("?", 2)[1];
     var myDoc = db.collection("users").doc(uid);
+    myDoc.get((doc) => {
+	alert(doc);
+    });
 
     var form = "";
     var data = [];
