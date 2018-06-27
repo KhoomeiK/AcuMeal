@@ -17,7 +17,7 @@ $(() =>  {
             var user = result.user;
             myDoc = db.collection("users").doc(user.uid);
             myDoc.set({"Name": user.displayName}).then( () => {
-                window.location.replace("/public/survey.html?" + user.uid);
+                window.location.replace("/public/survey.html?" + user.uid); // change to /survey.html when deploying
             });
         });
     }

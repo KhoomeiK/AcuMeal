@@ -32,7 +32,6 @@ var class_name = "meal";
 
 var features = ["color", "shape"];
 
-
 var dt = new DecisionTree(training_data, class_name, features);
 
 var predicted_class = dt.predict({
