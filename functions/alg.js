@@ -20,7 +20,6 @@ var training_data = [
     {"age":"65-75", "totalinches": "40-30","weight":"190-200", "gender":"","mealtime":"","healthcondition":"","activitylevel":"","workouttype":"","goal":"","cooktime":"","proteinsource":"","carbsource":"","tastes":"","cuisine":"","alergies":"","healthy":"","meal": "" },
     {"age":"30-50", "totalinches": "50-60","weight":"130-140", "gender":"","mealtime":"","healthcondition":"","activitylevel":"","workouttype":"","goal":"","cooktime":"","proteinsource":"","carbsource":"","tastes":"","cuisine":"","alergies":"","healthy":"","meal": "" },
     {"age":"50-60", "totalinches": "50-60","weight":"130-140", "gender":"","mealtime":"","healthcondition":"","activitylevel":"","workouttype":"","goal":"","cooktime":"","proteinsource":"","carbsource":"","tastes":"","cuisine":"","alergies":"","healthy":"","meal": "" },
-
 ];
 var test_data = [
     {"gender":"female", "shape":"hexagon", "liked":false},
