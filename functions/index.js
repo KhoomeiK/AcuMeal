@@ -43,10 +43,12 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
   var accuracy = dt.evaluate(test_data);
 
   var treeModel = dt.toJSON();
+  // decision tree stuff
 
   var mealPlan = "";
 
   return change.after.ref.update({
     mealPlan: mealPlan // set some mealPlan variable to whatever meal plan the algorithm created
   }, {merge: true});
+
 })});
