@@ -72,32 +72,32 @@ function score(person, recip) {
     for (var i = 0; i < recip.ingredients.length; i++) {
         for (var j = 0; j < person.carbsLiked.length; j++) {
             if (person.carbsLiked[j] === recip.ingredients[i].toLowerCase()) {
-                score += 1;
+                score += 1 * randomize();
             }
         }
         for (j = 0; j < person.carbsDisliked.length; j++) {
             if (person.carbsDisliked[j] === recip.ingredients[i].toLowerCase()) {
-                score -= 1;
+                score -= 1 * randomize();
             }
         }
         for (j = 0; j < person.fruitsDisliked.length; j++) {
             if (person.fruitsDisliked[j] === recip.ingredients[i].toLowerCase()) {
-                score -= 1;
+                score -= 1 * randomize();
             }
         }
         for (j = 0; j < person.fruitsLiked.length; j++) {
             if (person.fruitsLiked[j] === recip.ingredients[i].toLowerCase()) {
-                score += 1;
+                score += 1 * randomize();
             }
         }
         for (j = 0; j < person.vegetableDisliked.length; j++) {
             if (person.vegetableDisliked[j] === recip.ingredients[i].toLowerCase()) {
-                score -= 1;
+                score -= 1 * randomize();
             }
         }
         for (j = 0; j < person.vegetablesLiked.length; j++) {
             if (person.vegetablesLiked[j] === recip.ingredients[i].toLowerCase()) {
-                score += 1;
+                score += 1 * randomize();
             }
         }
         for (j = 0; j < person.allergies.length; j++) {
@@ -109,7 +109,7 @@ function score(person, recip) {
     for (j = 0; j < person.cuisineLiked.length; j++) {
         if (recip.cuisine !== undefined) {
             if (person.cuisineLiked[j] === recip.cuisine.toLowerCase()) {
-                score += 1 * 2;
+                score += 1 * 2 * randomize();
             }
         }
     }
@@ -118,12 +118,12 @@ function score(person, recip) {
         for (var i = 0; i < recip.taste.length; i++) {
             for (j = 0; j < person.tasteLiked.length; j++) {
                 if (person.tasteLiked[j] === recip.taste[i].toLowerCase()) {
-                    score += 1;
+                    score += 1 * randomize();
                 }
             }
             for (j = 0; j < person.tasteDisliked.length; j++) {
                 if (person.tasteDisliked[j] === recip.taste[i].toLowerCase()) {
-                    score -= 1;
+                    score -= 1 * randomize();
                 }
             }
         }
@@ -135,4 +135,8 @@ function score(person, recip) {
 
 
     return score;
+}
+
+function randomize() {
+    return Math.floor(Math.random() * 0.2 + 0.9*100)/100
 }
