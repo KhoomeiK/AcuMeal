@@ -13,18 +13,18 @@ var db = admin.firestore();
 
 let persona = {
     calories: 2000,
-    tasteLiked: ["sour"],
-    tasteDisliked: ["sweet"],
+    tasteLiked: ["sweet", "savoury", "umami"],
+    tasteDisliked: ["spicy"],
     maxCookTime: 60,
     allergies: [],
-    carbsLiked: ["bread", "potatoes"],
-    carbsDisliked: ["corn", "black beans", "kidney beans"],
-    fruitsLiked: ["strawberry", "banana", "orange", "plum"],
-    fruitsDisliked: ["pomegranate"],
-    vegetablesLiked: ["broccoli", "spinach", "cucumbers", "carrots", "green beans", "cauliflower"],
-    vegetableDisliked: ["zucchini", "celery", "brussel sprouts", "okra"],
-    cuisineLiked: ["indian"],
-    cusineDisliked: ["japaneese"]
+    carbsLiked: ["rice", "bread"],
+    carbsDisliked: [],
+    fruitsLiked: ["strawberries", "blueberries", "mango"],
+    fruitsDisliked: [],
+    vegetablesLiked: ["tomatoes"],
+    vegetableDisliked: ["avocado"],
+    cuisineLiked: ["chinese", "thai", "japanese"],
+    cusineDisliked: ["italian"]
 }
 
 db.collection('recipe').get().then((snapshot) => {
@@ -138,5 +138,5 @@ function score(person, recip) {
 }
 
 function randomize() {
-    return Math.floor(Math.random() * 0.2 + 0.9*100)/100
+    return Math.floor(Math.random() * 0.4 + 0.8 * 100) / 100;
 }
