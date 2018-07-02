@@ -11,6 +11,15 @@ admin.initializeApp({
 
 var db = admin.firestore();
 
+let persona = {
+    tasteLiked: [""],
+    tasteDisliked: [""],
+    meal: [],
+    maxCookTime: 69,
+    allergies: [""],
+    carbsLiked: [""],
+    carbsDisliked: [""]
+}
 
 db.collection('recipe').get().then((snapshot) => {
     snapshot.forEach((doc) => {
@@ -45,3 +54,14 @@ db.collection('recipe').get().then((snapshot) => {
 }).catch((err) => {
     console.log('Error getting documents', err);
 });
+
+function score(person, recipe) {
+    let score = 0;
+    for (var i = 0; i < recipe.ingredients.length; i++) {
+        for (var j = 0; j < person.tasteLiked; j++) {
+            if (person.tasteLiked[j] == recipe.ingredients[i]) {
+                score += 1;
+            }
+        }
+    }
+}
