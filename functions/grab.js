@@ -1,5 +1,5 @@
 const admin = require("firebase-admin");
-const fs = require('fs')
+const fs = require('fs');
 
 var serviceAccount = require("acumeal-c8f89-firebase-adminsdk-cvzvv-55a5470d0d");
 var recipe = [];
@@ -24,15 +24,18 @@ db.collection('recipe').get().then((snapshot) => {
             calories: doc.data().Calories.slice(0, doc.data().Calories.length - 4),
             carbs: carbs,
             cookTime: doc.data()["Cooking Time"].slice(0, doc.data()["Cooking Time"].length - 3),
-            ingredients: doc.data().Ingredients
-        })
+            ingredients: doc.data().Ingredients,
+            taste: doc.data().taste,
+            meal: doc.data().Meal,
+            cuisine: doc.data().Cuisine
+        });
         console.log(index)
         /*
         console.log(doc.data().Calories);
         console.log(doc.data().Carbohydrates);
         console.log(doc.data()["Cooking Time"]);
         console.log(doc.data().Ingredients);*/
-    })
+    });
 
     fs.writeFile('save.json', JSON.stringify(recipe), function (err) {
         if (err) throw err;
@@ -41,4 +44,4 @@ db.collection('recipe').get().then((snapshot) => {
     console.log(recipe[0])
 }).catch((err) => {
     console.log('Error getting documents', err);
-})
+});
