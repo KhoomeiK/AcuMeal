@@ -109,7 +109,7 @@ function score(person, recip) {
     for (j = 0; j < person.cuisineLiked.length; j++) {
         if (recip.cuisine !== undefined) {
             if (person.cuisineLiked[j] === recip.cuisine.toLowerCase()) {
-                score += 1 * 2 * randomize();
+                score += 2 * randomize();
             }
         }
     }
