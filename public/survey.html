@@ -5,7 +5,17 @@
         <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
     </head>
     <body>
-        <form id="q">
+
+            <form id="survey">
+               <div>
+                            <h3>Personal Info</h3>
+                            <input type="text" placeholder="First Name"><BR>
+                            <input type="text" placeholder="Last Name"><BR>
+                            <input type="text" placeholder="Email"><BR>
+                 </div>    
+        
+
+            
         <div>
             <h3>Metrics?</h3>
             <input type="text" placeholder="Age"><BR>
@@ -65,16 +75,7 @@
             <input type="radio" value="3" name="cooktime"> over 2 hours<BR>
         </div> 
 
-        <div>
-            <h3>Would you consider having a personalized meal plan?</h3>
-            <input type="radio" value="0" name="personalizedmeal"> Yes<BR>
-            <input type="radio" value="1" name="personalizedmeal"> No<BR>
-        </div> 
-        <div>
-            <h3>Are you interested in having recipes inlcuded in your personalized meal plan ?</h3>
-            <input type="radio" value="0" name="personalrecipes"> Yes<BR>
-            <input type="radio" value="1" name="personalrecipes"> No<BR>
-        </div> 
+
         <div>
             <h3>How many meals do you eat in a day?</h3>
             <input type="radio" value="0" name="meals"> 1<BR>
@@ -113,20 +114,20 @@
             <input type="radio" value="8" name="protein"> Seeds<BR>
         </div>
             <h3>What carbs do you mostly prefer?</h3>
-            <input type="radio" value="0" name="carbs"> Rice<BR>
-            <input type="radio" value="1" name="carbs"> Vegetables<BR>
-            <input type="radio" value="2" name="carbs"> Pasta<BR>
-            <input type="radio" value="3" name="carbs"> Bread<BR>
-            <input type="radio" value="4" name="carbs"> Beans/Peas<BR>
-            <input type="radio" value="5" name="carbs"> Potatoes<BR>
-            <input type="radio" value="6" name="carbs"> Smoothies<BR>
+            <input type="radio" value="0"> Rice<BR>
+            <input type="radio" value="1"> Vegetables<BR>
+            <input type="radio" value="2"> Pasta<BR>
+            <input type="radio" value="3"> Bread<BR>
+            <input type="radio" value="4"> Beans/Peas<BR>
+            <input type="radio" value="5"> Potatoes<BR>
+            <input type="radio" value="6"> Smoothies(fruits)<BR>
         </div>  
             <h3>What is your preferred tastes? </h3>
-            <input type="radio" value="0" name="tastes"> Sweet<BR>
-            <input type="radio" value="1" name="tastes"> Salty<BR>
-            <input type="radio" value="2" name="tastes"> Sour<BR>
-            <input type="radio" value="3" name="tastes"> Bitter<BR>
-            <input type="radio" value="4" name="tastes"> Umami(Savory)<BR>
+            <input type="radio" value="0"> Sweet<BR>
+            <input type="radio" value="1"> Salty<BR>
+            <input type="radio" value="2"> Sour<BR>
+            <input type="radio" value="3"> Bitter<BR>
+            <input type="radio" value="4"> Umami(Savory)<BR>
         </div>  
         <div>
             <h3>What is your preferred cuisine?</h3>
@@ -155,11 +156,28 @@
             <h3>How healthy would you like your meal?</h3>
             <input type="radio" value="0" name="health"> Not healthy (I want to satisfy my cravings)<BR>
             <input type="radio" value="1" name="health"> Somewhat healthy<BR>
-            <input type="radio" value="2" name="health"> Fish<BR>
             <input type="radio" value="3" name="health"> Very Healthy<BR>
             <input type="radio" value="4" name="health"> Doesn't matter<BR> <BR>
         </div>  
-        <input type="submit" id="sub" value="Submit">
+        <div>
+            <h3> How many meal plans would you like?</h3>
+            <input type="radio" value="0" name="mealplan"> 1<BR>
+            <input type="radio" value="1" name="mealplan"> 2<BR>
+            <input type="radio" value="2" name="mealplan"> 3<BR>
+            <input type="radio" value="3" name="mealplan"> 4<BR>
+            </div>
+
+        <button oneclick="outputname ()"> Submit </button>
+        <script> 
+
+                function outputname () {
+                var x,y,name,a,b,answer;
+                x=document.getElementById("survey") ;
+                y=x.elements["name","Age","Height","Weight","gender","Plan","Conditions","activity","workout","goals","cooktime","meals","protein","health"].value;
+                document.getElementById("demo").innerHTML+=y ;
+                }
+
+        </script>
     </form>
         <!--                        FOOTER                          -->
         <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
@@ -168,5 +186,6 @@
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
         <script src="script/survey.js"></script>
         <!--                        FOOTER                          -->
+        <p id="demo"></p>
     </body>
 </html>
