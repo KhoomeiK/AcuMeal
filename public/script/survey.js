@@ -31,10 +31,10 @@ setInterval(function () {
             }).catch(function (error) {
                 console.error("Error writing document: ", error);
             })
-        })
+        });
         done = true;
     }
-}, 100)
+}, 100);
 
 function find(thing) {
     return document.getElementById("survey").elements[thing].value;
@@ -42,7 +42,7 @@ function find(thing) {
 
 function multiplefind(index) {
     let elems = document.getElementById("survey").elements[index];
-    let ret = []
+    let ret = [];
     for (var i = 0; i < elems.length; i++) {
         if (elems[i].checked) {
             ret.push(elems[i].value)
