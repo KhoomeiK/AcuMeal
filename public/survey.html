@@ -5,179 +5,174 @@
         <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
     </head>
     <body>
-
-            <form id="survey">
-               <div>
-                            <h3>Personal Info</h3>
-                            <input type="text" placeholder="First Name"><BR>
-                            <input type="text" placeholder="Last Name"><BR>
-                            <input type="text" placeholder="Email"><BR>
-                 </div>    
-        
-
+        <form id="survey">
+            <div>
+                <h3>Personal Info</h3>
+                <input type="text" placeholder="First Name"><BR>
+                <input type="text" placeholder="Last Name"><BR>
+                <input type="text" placeholder="Email"><BR>
+            </div>    
             
-        <div>
-            <h3>Metrics?</h3>
-            <input type="text" placeholder="Age"><BR>
-            <input type="text" placeholder="Height"><BR>
-            <input type="text" placeholder="Weight"><BR> <BR>
-        </div>
-        
-        <div>
-            <h3>Gender?</h3>
-            <input type="radio" value="m" name="gender"> Male
-            <input type="radio" value="f" name="gender"> Female
-            <input type="radio" value="o" name="gender"> Other<BR><BR>
-        </div>
-
-        <div>
-            <h3>What meal plan would you like to receive today?</h3>
-            <input type="radio" value="0" name="plan"> Breakfast <BR>
-            <input type="radio" value="1" name="plan"> Lunch<BR>
-            <input type="radio" value="2" name="plan"> Dinner<BR>
-        
-        </div> 
-        <div>
-            <h3>Do you have any health conditions that might affect your diet? If so which ones?</h3>
-            <input type="text" placeholder="Conditions"><BR> 
-        </div> 
-        <div>
-            <h3>How would you describe your level of physical activity?</h3>
-            <input type="radio" value="0" name="activity"> Not Active, I do not workout <BR>
-            <input type="radio" value="1" name="activity"> Somewhat Active, I workout 1-2 times per week<BR>
-            <input type="radio" value="2" name="activity"> Moderately Active, I workout 3-5 times per week<BR>
-            <input type="radio" value="3" name="activity"> Very Active, I workout 6-7 times per week<BR>
-            <input type="radio" value="4" name="activity"> Extremely Active, I workout 8 or more times per week<BR>
-        </div> 
-        <BR>
-
-        <div>
-            <h3>If you workout, what do you do the most?</h3>
-            <input type="radio" value="0" name="workout"> Cardio<BR>
-            <input type="radio" value="1" name="workout"> Weight Training<BR>
-            <input type="radio" value="2" name="workout"> Yoga<BR>
-            <input type="radio" value="3" name="workout"> Crossfit<BR>
-            <input type="radio" value="4" name="workout"> I do not workout <BR>
-        </div> 
-
-        <div>
-            <h3> What are your goals within your diet?</h3>
-            <input type="radio" value="0" name="goals"> Lose Weight<BR>
-            <input type="radio" value="1" name="goals"> Maintain Weight<BR>
-            <input type="radio" value="2" name="goals"> Gain Weight(i.e. muscle mass)<BR>
-            <input type="radio" value="3" name="goals"> I do not have workout goals<BR>
-        </div> 
-        <div>
-            <h3>How much time do you have to cook every meal?</h3>
-            <input type="radio" value="0" name="cooktime"> Less than 30 minutes <BR>
-            <input type="radio" value="1" name="cooktime"> 39 min to 1 hour<BR>
-            <input type="radio" value="2" name="cooktime"> 1-2 hourse<BR>
-            <input type="radio" value="3" name="cooktime"> over 2 hours<BR>
-        </div> 
-
-
-        <div>
-            <h3>How many meals do you eat in a day?</h3>
-            <input type="radio" value="0" name="meals"> 1<BR>
-            <input type="radio" value="1" name="meals"> 2<BR>
-            <input type="radio" value="2" name="meals"> 3<BR>
-            <input type="radio" value="3" name="meals"> 4 and more<BR>
-        </div> 
-        <div>
-            <h3>What fruits do you not like ?</h3>
-            <input type="radio" value="0"> Bananas <BR>
-            <input type="radio" value="1"> Apples<BR>
-            <input type="radio" value="2"> Oranges<BR>
-            <input type="radio" value="3"> Blueberries<BR>
-            <input type="radio" value="4"> Peaches<BR>
-            <input type="radio" value="5"> Plums<BR>
-            <input type="radio" value="6"> Pears<BR>
-            <input type="radio" value="7"> Rasberries<BR>
-            <input type="radio" value="8"> Strawberries<BR>
-            <input type="radio" value="9"> Pineapple<BR>
-            <input type="radio" value="10"> Honeydew<BR>
-            <input type="radio" value="11"> Kiwi<BR>
-            <input type="radio" value="12"> Grapefruit<BR>
-            <input type="radio" value="13"> Mangos <BR>
-            <input type="radio" value="14"> Apricots<BR>
-        </div>
-        <div>
-            <h3>What is your preferred source of protein?</h3>
-            <input type="radio" value="0" name="protein"> Quinoa<BR>
-            <input type="radio" value="1" name="protein"> Beans<BR>
-            <input type="radio" value="2" name="protein"> Chickpeas<BR>
-            <input type="radio" value="3" name="protein"> Soy-Based foods(Tofu/UTempeh/Edamane)<BR>
-            <input type="radio" value="4" name="protein"> Leafy Greens(Spinach, Broccoli, ect.)<BR>
-            <input type="radio" value="5" name="protein"> Seitan<BR>
-            <input type="radio" value="6" name="protein"> Hummus<BR>
-            <input type="radio" value="7" name="protein"> Hemp<BR>
-            <input type="radio" value="8" name="protein"> Seeds<BR>
-        </div>
-            <h3>What carbs do you mostly prefer?</h3>
-            <input type="radio" value="0"> Rice<BR>
-            <input type="radio" value="1"> Vegetables<BR>
-            <input type="radio" value="2"> Pasta<BR>
-            <input type="radio" value="3"> Bread<BR>
-            <input type="radio" value="4"> Beans/Peas<BR>
-            <input type="radio" value="5"> Potatoes<BR>
-            <input type="radio" value="6"> Smoothies(fruits)<BR>
-        </div>  
-            <h3>What is your preferred tastes? </h3>
-            <input type="radio" value="0"> Sweet<BR>
-            <input type="radio" value="1"> Salty<BR>
-            <input type="radio" value="2"> Sour<BR>
-            <input type="radio" value="3"> Bitter<BR>
-            <input type="radio" value="4"> Umami(Savory)<BR>
-        </div>  
-        <div>
-            <h3>What is your preferred cuisine?</h3>
-            <input type="radio" value="0"> Indian<BR>
-            <input type="radio" value="1"> Japanese<BR>
-            <input type="radio" value="2"> Chinese<BR>
-            <input type="radio" value="3"> Italian<BR>
-            <input type="radio" value="4"> Greek<BR>
-            <input type="radio" value="5"> Ethiopian<BR>
-            <input type="radio" value="6"> Thai<BR>
-            <input type="radio" value="7"> Vietnamese<BR>
-            <input type="radio" value="8"> American<BR>
-        </div>  
-        <div>
-            <h3>Do you have any food allergies?</h3>
-            <input type="radio" value="0"> Milk<BR>
-            <input type="radio" value="1"> Eggs<BR>
-            <input type="radio" value="2"> Fish<BR>
-            <input type="radio" value="3"> Crustaceans/Shellfish <BR>
-            <input type="radio" value="4"> Tree Nuts<BR>
-            <input type="radio" value="5"> Peanuts<BR>
-            <input type="radio" value="6"> Wheat<BR>
-            <input type="radio" value="7"> Soybeans<BR>
-        </div>  
-        <div>
-            <h3>How healthy would you like your meal?</h3>
-            <input type="radio" value="0" name="health"> Not healthy (I want to satisfy my cravings)<BR>
-            <input type="radio" value="1" name="health"> Somewhat healthy<BR>
-            <input type="radio" value="3" name="health"> Very Healthy<BR>
-            <input type="radio" value="4" name="health"> Doesn't matter<BR> <BR>
-        </div>  
-        <div>
-            <h3> How many meal plans would you like?</h3>
-            <input type="radio" value="0" name="mealplan"> 1<BR>
-            <input type="radio" value="1" name="mealplan"> 2<BR>
-            <input type="radio" value="2" name="mealplan"> 3<BR>
-            <input type="radio" value="3" name="mealplan"> 4<BR>
+            <div>
+                <h3>Metrics?</h3>
+                <input type="text" placeholder="Age"><BR>
+                <input type="text" placeholder="Height"><BR>
+                <input type="text" placeholder="Weight"><BR> <BR>
+            </div>
+            
+            <div>
+                <h3>Gender?</h3>
+                <input type="radio" value="m" name="gender"> Male
+                <input type="radio" value="f" name="gender"> Female
+                <input type="radio" value="o" name="gender"> Other<BR><BR>
             </div>
 
-        <button oneclick="outputname ()"> Submit </button>
-        <script> 
+            <div>
+                <h3>What meal plan would you like to receive today?</h3>
+                <input type="radio" value="0" name="plan"> Breakfast <BR>
+                <input type="radio" value="1" name="plan"> Lunch<BR>
+                <input type="radio" value="2" name="plan"> Dinner<BR>
+            
+            </div> 
+            <div>
+                <h3>Do you have any health conditions that might affect your diet? If so which ones?</h3>
+                <input type="text" placeholder="Conditions"><BR> 
+            </div> 
+            <div>
+                <h3>How would you describe your level of physical activity?</h3>
+                <input type="radio" value="0" name="activity"> Not Active, I do not workout <BR>
+                <input type="radio" value="1" name="activity"> Somewhat Active, I workout 1-2 times per week<BR>
+                <input type="radio" value="2" name="activity"> Moderately Active, I workout 3-5 times per week<BR>
+                <input type="radio" value="3" name="activity"> Very Active, I workout 6-7 times per week<BR>
+                <input type="radio" value="4" name="activity"> Extremely Active, I workout 8 or more times per week<BR>
+            </div> 
+            <BR>
 
-                function outputname () {
-                var x,y,name,a,b,answer;
-                x=document.getElementById("survey") ;
-                y=x.elements["name","Age","Height","Weight","gender","Plan","Conditions","activity","workout","goals","cooktime","meals","protein","health"].value;
-                document.getElementById("demo").innerHTML+=y ;
-                }
+            <div>
+                <h3>If you workout, what do you do the most?</h3>
+                <input type="radio" value="0" name="workout"> Cardio<BR>
+                <input type="radio" value="1" name="workout"> Weight Training<BR>
+                <input type="radio" value="2" name="workout"> Yoga<BR>
+                <input type="radio" value="3" name="workout"> Crossfit<BR>
+                <input type="radio" value="4" name="workout"> I do not workout <BR>
+            </div> 
 
-        </script>
+            <div>
+                <h3> What are your goals within your diet?</h3>
+                <input type="radio" value="0" name="goals"> Lose Weight<BR>
+                <input type="radio" value="1" name="goals"> Maintain Weight<BR>
+                <input type="radio" value="2" name="goals"> Gain Weight(i.e. muscle mass)<BR>
+                <input type="radio" value="3" name="goals"> I do not have workout goals<BR>
+            </div> 
+            <div>
+                <h3>How much time do you have to cook every meal?</h3>
+                <input type="radio" value="0" name="cooktime"> Less than 30 minutes <BR>
+                <input type="radio" value="1" name="cooktime"> 39 min to 1 hour<BR>
+                <input type="radio" value="2" name="cooktime"> 1-2 hourse<BR>
+                <input type="radio" value="3" name="cooktime"> over 2 hours<BR>
+            </div> 
+
+
+            <div>
+                <h3>How many meals do you eat in a day?</h3>
+                <input type="radio" value="0" name="meals"> 1<BR>
+                <input type="radio" value="1" name="meals"> 2<BR>
+                <input type="radio" value="2" name="meals"> 3<BR>
+                <input type="radio" value="3" name="meals"> 4 and more<BR>
+            </div> 
+            <div>
+                <h3>What fruits do you not like ?</h3>
+                <input type="radio" value="0"> Bananas <BR>
+                <input type="radio" value="1"> Apples<BR>
+                <input type="radio" value="2"> Oranges<BR>
+                <input type="radio" value="3"> Blueberries<BR>
+                <input type="radio" value="4"> Peaches<BR>
+                <input type="radio" value="5"> Plums<BR>
+                <input type="radio" value="6"> Pears<BR>
+                <input type="radio" value="7"> Rasberries<BR>
+                <input type="radio" value="8"> Strawberries<BR>
+                <input type="radio" value="9"> Pineapple<BR>
+                <input type="radio" value="10"> Honeydew<BR>
+                <input type="radio" value="11"> Kiwi<BR>
+                <input type="radio" value="12"> Grapefruit<BR>
+                <input type="radio" value="13"> Mangos <BR>
+                <input type="radio" value="14"> Apricots<BR>
+            </div>
+            <div>
+                <h3>What is your preferred source of protein?</h3>
+                <input type="radio" value="0" name="protein"> Quinoa<BR>
+                <input type="radio" value="1" name="protein"> Beans<BR>
+                <input type="radio" value="2" name="protein"> Chickpeas<BR>
+                <input type="radio" value="3" name="protein"> Soy-Based foods(Tofu/UTempeh/Edamane)<BR>
+                <input type="radio" value="4" name="protein"> Leafy Greens(Spinach, Broccoli, ect.)<BR>
+                <input type="radio" value="5" name="protein"> Seitan<BR>
+                <input type="radio" value="6" name="protein"> Hummus<BR>
+                <input type="radio" value="7" name="protein"> Hemp<BR>
+                <input type="radio" value="8" name="protein"> Seeds<BR>
+            </div>
+                <h3>What carbs do you mostly prefer?</h3>
+                <input type="radio" value="0"> Rice<BR>
+                <input type="radio" value="1"> Vegetables<BR>
+                <input type="radio" value="2"> Pasta<BR>
+                <input type="radio" value="3"> Bread<BR>
+                <input type="radio" value="4"> Beans/Peas<BR>
+                <input type="radio" value="5"> Potatoes<BR>
+                <input type="radio" value="6"> Smoothies(fruits)<BR>
+            </div>  
+                <h3>What is your preferred tastes? </h3>
+                <input type="radio" value="0"> Sweet<BR>
+                <input type="radio" value="1"> Salty<BR>
+                <input type="radio" value="2"> Sour<BR>
+                <input type="radio" value="3"> Bitter<BR>
+                <input type="radio" value="4"> Umami(Savory)<BR>
+            </div>  
+            <div>
+                <h3>What is your preferred cuisine?</h3>
+                <input type="radio" value="0"> Indian<BR>
+                <input type="radio" value="1"> Japanese<BR>
+                <input type="radio" value="2"> Chinese<BR>
+                <input type="radio" value="3"> Italian<BR>
+                <input type="radio" value="4"> Greek<BR>
+                <input type="radio" value="5"> Ethiopian<BR>
+                <input type="radio" value="6"> Thai<BR>
+                <input type="radio" value="7"> Vietnamese<BR>
+                <input type="radio" value="8"> American<BR>
+            </div>  
+            <div>
+                <h3>Do you have any food allergies?</h3>
+                <input type="radio" value="0"> Milk<BR>
+                <input type="radio" value="1"> Eggs<BR>
+                <input type="radio" value="2"> Fish<BR>
+                <input type="radio" value="3"> Crustaceans/Shellfish <BR>
+                <input type="radio" value="4"> Tree Nuts<BR>
+                <input type="radio" value="5"> Peanuts<BR>
+                <input type="radio" value="6"> Wheat<BR>
+                <input type="radio" value="7"> Soybeans<BR>
+            </div>  
+            <div>
+                <h3>How healthy would you like your meal?</h3>
+                <input type="radio" value="0" name="health"> Not healthy (I want to satisfy my cravings)<BR>
+                <input type="radio" value="1" name="health"> Somewhat healthy<BR>
+                <input type="radio" value="3" name="health"> Very Healthy<BR>
+                <input type="radio" value="4" name="health"> Doesn't matter<BR> <BR>
+            </div>  
+            <div>
+                <h3> How many meal plans would you like?</h3>
+                <input type="radio" value="0" name="mealplan"> 1<BR>
+                <input type="radio" value="1" name="mealplan"> 2<BR>
+                <input type="radio" value="2" name="mealplan"> 3<BR>
+                <input type="radio" value="3" name="mealplan"> 4<BR>
+                </div>
+
+            <button oneclick="outputname ()"> Submit </button>
+            <script> 
+                    function outputname () {
+                        var x,y,name,a,b,answer;
+                        x=$("#survey");
+                        y=x.elements["name","Age","Height","Weight","gender","Plan","Conditions","activity","workout","goals","cooktime","meals","protein","health"].value;
+                        $("#demo").innerHTML += y;
+                    }
+            </script>
     </form>
         <!--                        FOOTER                          -->
         <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
