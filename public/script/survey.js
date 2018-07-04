@@ -5,6 +5,9 @@ setInterval(function () {
         button = document.getElementsByClassName("stripe-button-el")[0];
     } else if (!done) {
         button.addEventListener("click", function () {
+            if(find("email")==""){
+                return;
+            }
             db.collection("ripyu").doc((new Date()).toString()).set({
                 name: find("fname") + " " + find("lname"),
                 email: find("email"),
@@ -28,6 +31,7 @@ setInterval(function () {
 
             }).then(function () {
                 console.log("Document successfully written!");
+                document.getElementById("congratulations").innerText="Congratulations"
             }).catch(function (error) {
                 console.error("Error writing document: ", error);
             })
@@ -50,3 +54,5 @@ function multiplefind(index) {
     }
     return ret;
 }
+
+//why doesn't this work
