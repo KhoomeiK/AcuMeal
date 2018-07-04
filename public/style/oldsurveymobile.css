@@ -20,10 +20,12 @@ form {
 body {
     text-align: center;
     background-color: white;
+    font-size: 130%;
 }
 
 form div h3 {
     margin-top: 0;
+    font-size: 130%;
 }
 
 input[type=radio] {
@@ -60,6 +62,6 @@ input[type=radio] {
 }
 
 .giantlogothing {
-    width: 400px !important;
+    width: 500px !important;
     margin: 30px;
 }
