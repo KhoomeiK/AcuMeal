@@ -9,7 +9,7 @@
 <body>
 <img src="https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color.png"
      srcset="https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color-p-500.png 500w, https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color-p-800.png 800w, https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color-p-1080.png 1080w, https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color.png 1230w"
-     sizes="200px" class="logo-center space">
+     sizes="400px" class="logo-center space">
 <form id="survey">
     <div>
         <h3>Personal Info</h3>
@@ -190,7 +190,19 @@
     </script> -->
 </form>
 <!--                        FOOTER                          -->
-<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDV7SDc8Q6tbiAenlBPM5iHZ6ew5rhmA0o",
+        authDomain: "acumeal-c8f89.firebaseapp.com",
+        databaseURL: "https://acumeal-c8f89.firebaseio.com",
+        projectId: "acumeal-c8f89",
+        storageBucket: "acumeal-c8f89.appspot.com",
+        messagingSenderId: "741968191320"
+    };
+    firebase.initializeApp(config);
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
