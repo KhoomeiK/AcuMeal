@@ -12,7 +12,7 @@
                 <input type="text" placeholder="Last Name"><BR>
                 <input type="text" placeholder="Email"><BR>
             </div>    
-            
+   
             <div>
                 <h3>Metrics?</h3>
                 <input type="text" placeholder="Age"><BR>
@@ -164,15 +164,26 @@
                 <input type="radio" value="3" name="mealplan"> 4<BR>
                 </div>
 
-            <button oneclick="outputname ()"> Submit </button>
-            <script> 
+            <button oneclick="outputname()"> Submit </button>
+            <form action="/thanks.html" method="POST">
+                <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_LHsexAERbmgTMpBjur7i0LPS"
+                    data-amount="2999.99"
+                    data-name="AcuMeal"
+                    data-description="Get Personalized Meal Plan"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto">
+                </script>
+            </form>
+            <!-- <script> 
                     function outputname () {
                         var x,y,name,a,b,answer;
                         x=$("#survey");
                         y=x.elements["name","Age","Height","Weight","gender","Plan","Conditions","activity","workout","goals","cooktime","meals","protein","health"].value;
                         $("#demo").innerHTML += y;
                     }
-            </script>
+            </script> -->
     </form>
         <!--                        FOOTER                          -->
         <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
