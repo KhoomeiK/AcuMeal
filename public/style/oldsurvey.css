@@ -1,0 +1,57 @@
+form div {
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+form {
+    width: 80%;
+    text-align: left;
+    display: inline-block;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+    padding: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    text-align: center;
+}
+
+form div h3 {
+    margin-top: 0;
+}
+
+input[type=radio] {
+    background-color: #5d6c7b;
+}
+
+.submit {
+    background-color: #69c515;
+    border: none;
+    padding: 7px 18px 7px 18px;
+    font-size: 24px;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14)
+}
+
+.submit:hover {
+    background-color: #61b613;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14)
+}
+
+.submit:active {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14)
+}
+
+.logo {
+    color: #69c515;
+}
+
+.space {
+    margin-top: 20px;
+    text-align: center;
+}
