@@ -13,160 +13,150 @@
 <form id="survey">
     <div>
         <h3>Personal Info</h3>
-        <input type="text" placeholder="First Name"><BR>
-        <input type="text" placeholder="Last Name"><BR>
-        <input type="text" placeholder="Email"><BR>
+        <input type="text" placeholder="First Name" name="fname"><BR>
+        <input type="text" placeholder="Last Name" name="lname"><BR>
+        <input type="text" placeholder="Email" name="email"><BR>
     </div>
 
     <div>
         <h3>Metrics?</h3>
-        <input type="text" placeholder="Age"><BR>
-        <input type="text" placeholder="Height"><BR>
-        <input type="text" placeholder="Weight"><BR> <BR>
+        <input type="text" placeholder="Age" name="age"><BR>
+        <input type="text" placeholder="Height" name="height"><BR>
+        <input type="text" placeholder="Weight" name="weight"><BR>
     </div>
 
     <div>
         <h3>Gender?</h3>
-        <input type="radio" value="m" name="gender"> Male
-        <input type="radio" value="f" name="gender"> Female
-        <input type="radio" value="o" name="gender"> Other<BR><BR>
-    </div>
-
-    <div>
-        <h3>What meal plan would you like to receive today?</h3>
-        <input type="radio" value="0" name="plan"> Breakfast <BR>
-        <input type="radio" value="1" name="plan"> Lunch<BR>
-        <input type="radio" value="2" name="plan"> Dinner<BR>
-
+        <input type="radio" value="male" name="gender"> Male
+        <input type="radio" value="female" name="gender"> Female
+        <input type="radio" value="attack helecopter" name="gender"> Other<BR>
     </div>
     <div>
         <h3>Do you have any health conditions that might affect your diet? If so which ones?</h3>
-        <input type="text" placeholder="Conditions"><BR>
+        <input type="text" placeholder="Conditions" name="healthcondition"><BR>
     </div>
     <div>
         <h3>How would you describe your level of physical activity?</h3>
-        <input type="radio" value="0" name="activity"> Not Active, I do not workout <BR>
-        <input type="radio" value="1" name="activity"> Somewhat Active, I workout 1-2 times per week<BR>
-        <input type="radio" value="2" name="activity"> Moderately Active, I workout 3-5 times per week<BR>
-        <input type="radio" value="3" name="activity"> Very Active, I workout 6-7 times per week<BR>
-        <input type="radio" value="4" name="activity"> Extremely Active, I workout 8 or more times per week<BR>
+        <input type="radio" value="Not Active, I do not workout" name="activity"> Not Active, I do not workout <BR>
+        <input type="radio" value="Somewhat Active, I workout 1-2 times per week" name="activity"> Somewhat Active, I
+        workout 1-2 times per week<BR>
+        <input type="radio" value="Moderately Active, I workout 3-5 times per week" name="activity"> Moderately Active,
+        I workout 3-5 times per week<BR>
+        <input type="radio" value="Very Active, I workout 6-7 times per week" name="activity"> Very Active, I workout
+        6-7 times per week<BR>
+        <input type="radio" value="Extremely Active, I workout 8 or more times per week" name="activity"> Extremely
+        Active, I workout 8 or more times per week<BR>
     </div>
     <BR>
 
     <div>
         <h3>If you workout, what do you do the most?</h3>
-        <input type="radio" value="0" name="workout"> Cardio<BR>
-        <input type="radio" value="1" name="workout"> Weight Training<BR>
-        <input type="radio" value="2" name="workout"> Yoga<BR>
-        <input type="radio" value="3" name="workout"> Crossfit<BR>
-        <input type="radio" value="4" name="workout"> I do not workout <BR>
+        <input type="radio" value="cardio" name="workout"> Cardio<BR>
+        <input type="radio" value="Weight Training" name="workout"> Weight Training<BR>
+        <input type="radio" value="Yoga" name="workout"> Yoga<BR>
+        <input type="radio" value="Crossfit" name="workout"> Crossfit<BR>
+        <input type="radio" value="I do not workout" name="workout"> I do not workout <BR>
     </div>
 
     <div>
         <h3> What are your goals within your diet?</h3>
-        <input type="radio" value="0" name="goals"> Lose Weight<BR>
-        <input type="radio" value="1" name="goals"> Maintain Weight<BR>
-        <input type="radio" value="2" name="goals"> Gain Weight(i.e. muscle mass)<BR>
-        <input type="radio" value="3" name="goals"> I do not have workout goals<BR>
+        <input type="radio" value="lose weight" name="goals"> Lose Weight<BR>
+        <input type="radio" value="maintain weight" name="goals"> Maintain Weight<BR>
+        <input type="radio" value="gain weight" name="goals"> Gain Weight(i.e. muscle mass)<BR>
     </div>
     <div>
         <h3>How much time do you have to cook every meal?</h3>
-        <input type="radio" value="0" name="cooktime"> Less than 30 minutes <BR>
-        <input type="radio" value="1" name="cooktime"> 39 min to 1 hour<BR>
-        <input type="radio" value="2" name="cooktime"> 1-2 hourse<BR>
-        <input type="radio" value="3" name="cooktime"> over 2 hours<BR>
+        <input type="radio" value="less than 30 mins" name="cooktime"> Less than 30 minutes <BR>
+        <input type="radio" value="39 to 1 hour" name="cooktime"> 39 min to 1 hour<BR>
+        <input type="radio" value="1-2 hours" name="cooktime"> 1-2 hours<BR>
+        <input type="radio" value="over 2 hours" name="cooktime"> over 2 hours<BR>
     </div>
 
 
     <div>
         <h3>How many meals do you eat in a day?</h3>
-        <input type="radio" value="0" name="meals"> 1<BR>
-        <input type="radio" value="1" name="meals"> 2<BR>
-        <input type="radio" value="2" name="meals"> 3<BR>
-        <input type="radio" value="3" name="meals"> 4 and more<BR>
+        <input type="radio" value="1" name="meals"> 1<BR>
+        <input type="radio" value="2" name="meals"> 2<BR>
+        <input type="radio" value="3" name="meals"> 3<BR>
+        <input type="radio" value="4" name="meals"> 4 and more<BR>
     </div>
     <div>
         <h3>What fruits do you not like ?</h3>
-        <input type="radio" value="0"> Bananas <BR>
-        <input type="radio" value="1"> Apples<BR>
-        <input type="radio" value="2"> Oranges<BR>
-        <input type="radio" value="3"> Blueberries<BR>
-        <input type="radio" value="4"> Peaches<BR>
-        <input type="radio" value="5"> Plums<BR>
-        <input type="radio" value="6"> Pears<BR>
-        <input type="radio" value="7"> Rasberries<BR>
-        <input type="radio" value="8"> Strawberries<BR>
-        <input type="radio" value="9"> Pineapple<BR>
-        <input type="radio" value="10"> Honeydew<BR>
-        <input type="radio" value="11"> Kiwi<BR>
-        <input type="radio" value="12"> Grapefruit<BR>
-        <input type="radio" value="13"> Mangos <BR>
-        <input type="radio" value="14"> Apricots<BR>
+        <input type="checkbox" value="bananas" name="fruitdislike"> Bananas <BR>
+        <input type="checkbox" value="apples" name="fruitdislike"> Apples<BR>
+        <input type="checkbox" value="oranges" name="fruitdislike"> Oranges<BR>
+        <input type="checkbox" value="blueberries" name="fruitdislike"> Blueberries<BR>
+        <input type="checkbox" value="peaches" name="fruitdislike"> Peaches<BR>
+        <input type="checkbox" value="plums" name="fruitdislike"> Plums<BR>
+        <input type="checkbox" value="pears" name="fruitdislike"> Pears<BR>
+        <input type="checkbox" value="raspberries" name="fruitdislike"> Raspberries<BR>
+        <input type="checkbox" value="strawberries" name="fruitdislike"> Strawberries<BR>
+        <input type="checkbox" value="pineapple" name="fruitdislike"> Pineapple<BR>
+        <input type="checkbox" value="honeydew" name="fruitdislike"> Honeydew<BR>
+        <input type="checkbox" value="kiwi" name="fruitdislike"> Kiwi<BR>
+        <input type="checkbox" value="grapefruit" name="fruitdislike"> Grapefruit<BR>
+        <input type="checkbox" value="mangos" name="fruitdislike"> Mangos <BR>
+        <input type="checkbox" value="apricots" name="fruitdislike"> Apricots<BR>
     </div>
     <div>
-        <h3>What is your preferred source of protein?</h3>
-        <input type="radio" value="0" name="protein"> Quinoa<BR>
-        <input type="radio" value="1" name="protein"> Beans<BR>
-        <input type="radio" value="2" name="protein"> Chickpeas<BR>
-        <input type="radio" value="3" name="protein"> Soy-Based foods(Tofu/UTempeh/Edamane)<BR>
-        <input type="radio" value="4" name="protein"> Leafy Greens(Spinach, Broccoli, ect.)<BR>
-        <input type="radio" value="5" name="protein"> Seitan<BR>
-        <input type="radio" value="6" name="protein"> Hummus<BR>
-        <input type="radio" value="7" name="protein"> Hemp<BR>
-        <input type="radio" value="8" name="protein"> Seeds<BR>
+        <h3>What are your preferred source of protein?</h3>
+        <input type="checkbox" value="Quinoa" name="protein"> Quinoa<BR>
+        <input type="checkbox" value="Beans" name="protein"> Beans<BR>
+        <input type="checkbox" value="Chickpeas" name="protein"> Chickpeas<BR>
+        <input type="checkbox" value="Soy-Based foods(Tofu/UTempeh/Edamane)" name="protein"> Soy-Based
+        foods(Tofu/UTempeh/Edamane)<BR>
+        <input type="checkbox" value="Leafy Greens(Spinach, Broccoli, ect." name="protein"> Leafy Greens(Spinach,
+        Broccoli, ect.)<BR>
+        <input type="checkbox" value="Seitan" name="protein"> Seitan<BR>
+        <input type="checkbox" value="Hummus" name="protein"> Hummus<BR>
+        <input type="checkbox" value="Hemp" name="protein"> Hemp<BR>
+        <input type="checkbox" value="Seeds" name="protein"> Seeds<BR>
     </div>
-    <h3>What carbs do you mostly prefer?</h3>
-    <input type="radio" value="0"> Rice<BR>
-    <input type="radio" value="1"> Vegetables<BR>
-    <input type="radio" value="2"> Pasta<BR>
-    <input type="radio" value="3"> Bread<BR>
-    <input type="radio" value="4"> Beans/Peas<BR>
-    <input type="radio" value="5"> Potatoes<BR>
-    <input type="radio" value="6"> Smoothies(fruits)<BR>
+    <h3>Which carbs do you mostly prefer?</h3>
+    <input type="checkbox" value="Rice" name="carbs"> Rice<BR>
+    <input type="checkbox" value="Vegetables" name="carbs"> Vegetables<BR>
+    <input type="checkbox" value="Pasta" name="carbs"> Pasta<BR>
+    <input type="checkbox" value="Bread" name="carbs"> Bread<BR>
+    <input type="checkbox" value="Beans/Peas" name="carbs"> Beans/Peas<BR>
+    <input type="checkbox" value="Potatoes" name="carbs"> Potatoes<BR>
+    <input type="checkbox" value="Smoothies(fruits)" name="carbs"> Smoothies(fruits)<BR>
     </div>
-    <h3>What is your preferred tastes? </h3>
-    <input type="radio" value="0"> Sweet<BR>
-    <input type="radio" value="1"> Salty<BR>
-    <input type="radio" value="2"> Sour<BR>
-    <input type="radio" value="3"> Bitter<BR>
-    <input type="radio" value="4"> Umami(Savory)<BR>
-    </div>
-    <div>
-        <h3>What is your preferred cuisine?</h3>
-        <input type="radio" value="0"> Indian<BR>
-        <input type="radio" value="1"> Japanese<BR>
-        <input type="radio" value="2"> Chinese<BR>
-        <input type="radio" value="3"> Italian<BR>
-        <input type="radio" value="4"> Greek<BR>
-        <input type="radio" value="5"> Ethiopian<BR>
-        <input type="radio" value="6"> Thai<BR>
-        <input type="radio" value="7"> Vietnamese<BR>
-        <input type="radio" value="8"> American<BR>
+    <h3>What are your preferred tastes? </h3>
+    <input type="checkbox" value="Sweet" name="flavour"> Sweet<BR>
+    <input type="checkbox" value="Salty" name="flavour"> Salty<BR>
+    <input type="checkbox" value="Sour" name="flavour"> Sour<BR>
+    <input type="checkbox" value="Bitter" name="flavour"> Bitter<BR>
+    <input type="checkbox" value="Umami(Savory)" name="flavour"> Umami(Savory)<BR>
     </div>
     <div>
-        <h3>Do you have any food allergies?</h3>
-        <input type="radio" value="0"> Milk<BR>
-        <input type="radio" value="1"> Eggs<BR>
-        <input type="radio" value="2"> Fish<BR>
-        <input type="radio" value="3"> Crustaceans/Shellfish <BR>
-        <input type="radio" value="4"> Tree Nuts<BR>
-        <input type="radio" value="5"> Peanuts<BR>
-        <input type="radio" value="6"> Wheat<BR>
-        <input type="radio" value="7"> Soybeans<BR>
+        <h3>What are your preferred cuisines?</h3>
+        <input type="checkbox" value="Indian" name="cuisine"> Indian<BR>
+        <input type="checkbox" value="Japanese" name="cuisine"> Japanese<BR>
+        <input type="checkbox" value="Chinese" name="cuisine"> Chinese<BR>
+        <input type="checkbox" value="Italian" name="cuisine"> Italian<BR>
+        <input type="checkbox" value="Greek" name="cuisine"> Greek<BR>
+        <input type="checkbox" value="Ethiopian" name="cuisine"> Ethiopian<BR>
+        <input type="checkbox" value="Thai" name="cuisine"> Thai<BR>
+        <input type="checkbox" value="Vietnamese" name="cuisine"> Vietnamese<BR>
+        <input type="checkbox" value="American" name="cuisine"> American<BR>
+    </div>
+    <div>
+        <h3>Which of these foods are you allergic to?</h3>
+        <input type="checkbox" value="Milk" name="allergies"> Milk<BR>
+        <input type="checkbox" value="Eggs" name="allergies"> Eggs<BR>
+        <input type="checkbox" value="Fish" name="allergies"> Fish<BR>
+        <input type="checkbox" value="Crustaceans/Shellfish" name="allergies"> Crustaceans/Shellfish <BR>
+        <input type="checkbox" value="Tree Nuts" name="allergies"> Tree Nuts<BR>
+        <input type="checkbox" value="Peanuts" name="allergies"> Peanuts<BR>
+        <input type="checkbox" value="Wheat" name="allergies"> Wheat<BR>
+        <input type="checkbox" value="Soybeans" name="allergies"> Soybeans<BR>
     </div>
     <div>
         <h3>How healthy would you like your meal?</h3>
-        <input type="radio" value="0" name="health"> Not healthy (I want to satisfy my cravings)<BR>
-        <input type="radio" value="1" name="health"> Somewhat healthy<BR>
-        <input type="radio" value="3" name="health"> Very Healthy<BR>
-        <input type="radio" value="4" name="health"> Doesn't matter<BR> <BR>
-    </div>
-    <div>
-        <h3> How many meal plans would you like?</h3>
-        <input type="radio" value="0" name="mealplan"> 1<BR>
-        <input type="radio" value="1" name="mealplan"> 2<BR>
-        <input type="radio" value="2" name="mealplan"> 3<BR>
-        <input type="radio" value="3" name="mealplan"> 4<BR>
+        <input type="radio" value="Not healthy" name="health"> Not healthy (I want to satisfy my cravings)<BR>
+        <input type="radio" value="Somewhat healthy" name="health"> Somewhat healthy<BR>
+        <input type="radio" value="Very Healthy" name="health"> Very Healthy<BR>
+        <input type="radio" value="Doesn't matter" name="health"> Doesn't matter<BR> <BR>
     </div>
 
     <form action="/thanks.html" method="POST">
@@ -202,6 +192,8 @@
         messagingSenderId: "741968191320"
     };
     firebase.initializeApp(config);
+    var db = firebase.firestore();
+
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
