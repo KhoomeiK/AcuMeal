@@ -13,11 +13,13 @@ $(() => {
     var myDoc = db.collection("users").doc(uid);
 
     var form = "";
-    var data = []; 
+    var data = [];
 
-    $("#sub").click(()=> {
-        form = $("#q").submit(val => {return false;})[0];
-        for(var i = 0; i < 94; i++) {
+    $("#sub").click(() => {
+        form = $("#q").submit(val => {
+            return false;
+        })[0];
+        for (var i = 0; i < 94; i++) {
             if (form[i].type == "text" || $(form[i]).is(":checked"))
                 data.push(form[i].value);
         }
@@ -55,10 +57,24 @@ $(() => {
             }).catch(error => {
                 data = [];
             })
-            .then(() => {
-                data = [];
-                console.log(data);
-                // window.location.replace("http://www.thanks.com") // create thanks.html page
-            });
+                .then(() => {
+                    data = [];
+                    console.log(data);
+                    // window.location.replace("http://www.thanks.com") // create thanks.html page
+                });
     });
 });
+
+
+let button;
+setInterval(
+    function () {
+        if (button == null) {
+            button = document.getElementsByClassName("stripe-button-el")[0];
+        } else {
+            button.addEventListener("click", function () {
+                alert("lol")
+            })
+        }
+    }, 100
+)
