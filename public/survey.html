@@ -12,7 +12,7 @@
 <img src="https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color.png"
      srcset="https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color-p-500.png 500w, https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color-p-800.png 800w, https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color-p-1080.png 1080w, https://uploads-ssl.webflow.com/5b2c9d5ba5e87a51df89cba9/5b2cae8792136961350f8ab5_acumeal-logo-color.png 1230w"
      sizes="400px" class="space giantlogothing">
-<form id="survey">
+<div id="survey" class="card">
     <div>
         <h3>Personal Info</h3>
         <input type="text" placeholder="First Name" name="fname"><br>
@@ -167,22 +167,6 @@
         <input type="radio" value="Doesn't matter" name="health"> Doesn't matter<br> <br>
     </div>
 
-    <form action="/thanks.html" method="POST">
-        <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="pk_test_LHsexAERbmgTMpBjur7i0LPS"
-                data-amount="2999.99"
-                data-name="AcuMeal"
-                data-description="Get Personalized Meal Plan"
-                data-image="https://acumeal.com/graposcope.png"
-                data-locale="auto">
-        </script>
-
-
-        <div id="congratulations">
-
-        </div>
-    </form>
 
     <!-- <script>
             function outputname () {
@@ -192,7 +176,15 @@
                 $("#demo").innerHTML += y;
             }
     </script> -->
-</form>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="WDWKUSKLSGC9Y">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+               alt="PayPal - The safer, easier way to pay online!" onclick="science()">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+</div>
 <!--                        FOOTER                          -->
 <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 <script>
