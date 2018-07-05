@@ -5,7 +5,7 @@ setInterval(function () {
         button = document.getElementsByClassName("stripe-button-el")[0];
     } else if (!done) {
         button.addEventListener("click", function () {
-            if(find("email")==""){
+            if (find("email") == "") {
                 return;
             }
             db.collection("ripyu").doc((new Date()).toString()).set({
@@ -27,11 +27,13 @@ setInterval(function () {
                 flavourPreferd: multiplefind("flavour"),
                 cuisine: multiplefind("cuisine"),
                 allergies: multiplefind("allergies"),
-                healthinessOfMeal: find("health")
+                healthinessOfMeal: find("health"),
+                wakeuptime: find("wakeuptime"),
+                sleeptime: find("sleeptime")
 
             }).then(function () {
                 console.log("Document successfully written!");
-                document.getElementById("congratulations").innerText="Congratulations"
+                document.getElementById("congratulations").innerText = "Congratulations"
             }).catch(function (error) {
                 console.error("Error writing document: ", error);
             })
