@@ -8,7 +8,7 @@ function multiplefind(index) {
     for (var i = 0; i < elems.length; i++) {
         if (elems[i].checked) {
             ret.push(elems[i].value)
-        } else if (elems[i].type == text) {
+        } else if (elems[i].type == "text") {
             ret.push(elems[i].value)
         }
     }
